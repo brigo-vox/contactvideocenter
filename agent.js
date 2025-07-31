@@ -55,7 +55,7 @@ const login = async () => {
 
     sdk.on(VoxImplant.Events.IncomingCall, (e) => {
     // function for the answer button
-    document.getElementById("loginBtn").onclick = async () => {
+    document.getElementById("acc").onclick = async () => {
       e.call.answer(
           undefined,
           undefined,
