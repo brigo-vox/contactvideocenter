@@ -1,6 +1,5 @@
 const sdk = VoxImplant.getInstance();
 const ACCOUNT_NODE = VoxImplant.ConnectionNode.NODE_9;
-const QUEUE = "videotest.brigo.queue.318";
 const USERNAME = "Usuario_Teste@videotest.brigo.n9.voximplant.com";
 const PASSWORD = "#Aiud0Gx";
 
@@ -38,7 +37,7 @@ async function iniciarPreview() {
 const startcall = () => {
     // prepare settings
     const callSettings = {
-        number: "brigovideo@videotest.brigo.n9.voximplant.com",
+        number: "client",
         video: {
             sendVideo: true,
             receiveVideo: true
