@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agente - Atendimento Voximplant</title>
+</head>
+<body>
+  <h2>Agente - Atendimento</h2>
+
+  <label for="cameraSelect">Câmera:</label>
+  <select id="cameraSelect"></select>
+
+  <label for="micSelect">Microfone:</label>
+  <select id="micSelect"></select>
+
+  <br /><br />
+  <button id="loginBtn">Entrar como Agente</button>
+
+  <h3>Prévia da Câmera</h3>
+  <video id="localvideo" autoplay muted playsinline width="300" height="200"></video>
+
+  <h3>Vídeo da Chamada</h3>
+  <video id="remoteVideo" autoplay playsinline width="300" height="200"></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/voximplant-websdk@4.9.0-2915/voximplant.min.js"></script>
+  <script src="agent.js"></script>
+</body>
+</html>
