@@ -21,12 +21,12 @@ async function listarDispositivos() {
   });
 }
 
-// Mostra prévia da câmera selecionada
+/* Mostra prévia da câmera selecionada
 async function iniciarPreview() {
   const camId = document.getElementById("cameraSelect").value;
   const constraints = {
     video: { deviceId: camId ? { exact: camId } : undefined },
-    audio: false,
+    audio: false,*/
   };
 
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
