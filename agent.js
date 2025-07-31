@@ -55,12 +55,13 @@ const login = async () => {
 
     sdk.on(VoxImplant.Events.IncomingCall, (e) => {
     // function for the answer button
+    document.getElementById("loginBtn").onclick = async () => {
       e.call.answer(
           undefined,
           undefined,
           {"sendVideo":true,"receiveVideo":true},
           false,
-      )
+      )};
 
     // how to process the incoming call events
     e.call.addEventListener(VoxImplant.CallEvents.Connected, (e) => {
