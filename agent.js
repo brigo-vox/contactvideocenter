@@ -115,6 +115,5 @@ streamManager.on(VoxImplant.Hardware.HardwareEvents.MediaRendererUpdated, (e) =>
 // Início
 document.getElementById("loginBtn").onclick = async () => {
   await listarDispositivos();
-  await iniciarPreview();
   await login();
 };
