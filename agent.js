@@ -30,7 +30,7 @@ async function iniciarPreview() {
   };
 
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
-  const preview = document.getElementById("preview");
+  const preview = document.getElementById("localvideo");
   preview.srcObject = stream;
 }
 
