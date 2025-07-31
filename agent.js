@@ -54,6 +54,7 @@ const login = async () => {
       }
 
     sdk.on(VoxImplant.Events.IncomingCall, (e) => {
+      console.log("Chamada recebida de:", e.call.from);
     // function for the answer button
     document.getElementById("acc").onclick = async () => {
       e.call.answer(
