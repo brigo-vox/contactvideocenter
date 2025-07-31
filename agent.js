@@ -21,18 +21,18 @@ async function listarDispositivos() {
   });
 }
 
-/* Mostra prévia da câmera selecionada
-async function iniciarPreview() {
+// Mostra prévia da câmera selecionada
+/*async function iniciarPreview() {
   const camId = document.getElementById("cameraSelect").value;
   const constraints = {
     video: { deviceId: camId ? { exact: camId } : undefined },
-    audio: false,*/
+    audio: false,
   };
 
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
   const preview = document.getElementById("localvideo");
   preview.srcObject = stream;
-}
+}*/
 
 // Login e aguarda chamadas
 const login = async () => {
@@ -55,26 +55,18 @@ const login = async () => {
 
     sdk.on(VoxImplant.Events.IncomingCall, (e) => {
     // function for the answer button
-    document.getElementById("answer").onclick = () => {
       e.call.answer(
           undefined,
           undefined,
           {"sendVideo":true,"receiveVideo":true},
           false,
       )
-    };
-
-    // how to make a decline button
-    document.getElementById("decline").onclick = () => {
-        e.call.decline();
-    };
 
     // how to process the incoming call events
     e.call.addEventListener(VoxImplant.CallEvents.Connected, (e) => {
         document.getElementById("endcall").onclick = () => {
             e.call.hangup();
         };
-
         // show the incoming remote video
         // point 4 of the article above
         e.call.on(VoxImplant.CallEvents.EndpointAdded, (e) => {
